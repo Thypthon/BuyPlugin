@@ -1,0 +1,8 @@
+name: BuyPlugin
+main: net.thehultberg.plugins.buy.BuyPlugin
+version: 0.1
+commands:
+    buy:
+        description: Hovedkommando.
+        usage: |
+               /<command>
