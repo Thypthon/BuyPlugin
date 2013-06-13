@@ -26,7 +26,7 @@ public class BuyPlugin extends JavaPlugin {
 	public ConfigHandler confighandler;
 	
 	/**
-	 * Minecraft logger.
+	 * Minecraft logger
 	 */
     public static final Logger log = Logger.getLogger("Minecraft");
 	
