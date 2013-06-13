@@ -19,11 +19,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  *
  */
 public class BuyPlugin extends JavaPlugin {
-
-	/**
-	 * Plugin defined here.
-	 */
-	public BuyPlugin plugin;
 	
 	/**
 	 * The config handler.
@@ -46,7 +41,6 @@ public class BuyPlugin extends JavaPlugin {
 	 */
 	public void onEnable(){
 		log.log(Level.INFO, "Plugin starter...");
-		this.plugin = this;
 		getDataFolder().mkdirs();
 		
 		this.confighandler.load(); // Load config.
@@ -96,7 +90,7 @@ public class BuyPlugin extends JavaPlugin {
     				if(args.length == 1 && args[0].equalsIgnoreCase("reloadConfig")){
     					// Reload config.
     					if(p.isOp()){
-    						plugin.reloadConfig();
+    						this.reloadConfig();
     						this.confighandler.load(); // Load config.
     						this.confighandler.trimProds(); // Trim prods listen.
     						this.confighandler.printHelpFile(); // Print help file.
